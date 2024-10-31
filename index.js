@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const unzipper = require('unzipper');
 
-const repoOwner = 'lanmower'; // Repository owner's username
-const repoName = 'bolt.new'; // Repository name
+const repoOwner = process.env.argv[2] // Repository owner's username
+const repoName = process.env.argv[3] // Repository name
 const outputFile = `${repoName}.zip`;
 
 // Remove the zip file if it exists
